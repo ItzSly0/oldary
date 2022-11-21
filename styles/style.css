@@ -1,0 +1,189 @@
+:root {
+	--white: #ffffff;
+	--highlight: #00cec9;
+	--light-gray: #979797;
+	--dark: #252525;
+	--light-dark: #353535;
+	--gradient1: #FF416C;
+	--gradient2: #FF4B2B;
+	--server-on: #27ae60;
+	--server-off: #e74c3c;
+	--logo-size: 20%;
+	--logo-padding: 3vw;
+	--icon-size: 8vw;
+	--icon-padding: 1vw;
+	--icon-font-size: 1.5vw;
+	--home-ip-font-size: 2vw;
+	--games-title-size: 3vw;
+	--games-margin: 5vh;
+	--card-margin: 1vw;
+	--card-margin-bottom: 1vw;
+}
+
+@media (orientation: portrait) {
+	:root {
+		--logo-size: 50%;
+		--logo-padding: 5vh;
+		--icon-size: 16vw;
+		--icon-padding: 3vw;
+		--icon-font-size: 3vw;
+		--home-ip-font-size: 4.5vw;
+		--games-title-size: 8vw;
+		--card-margin-bottom: 4vw;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: "Open Sans", Helvetica;
+}
+
+.h2-title {
+	text-align: center;
+	letter-spacing: 1vw;
+	font-weight: 100;
+	font-size: var(--games-title-size);
+}
+
+.container-padding {
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+
+#home {
+	height: 100vh;
+	background-image: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)), url("https://media.discordapp.net/attachments/1039292465859023009/1043399431006990336/unknown.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.home-content {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.home-logo img {
+	width: var(--logo-size);
+	padding-bottom: var(--logo-padding);
+}
+
+.home-icon-bar {
+	padding-bottom: 5vh;
+}
+
+.home-icon {
+	display: inline-block;
+	width: var(--icon-size);
+	padding-left: var(--icon-padding);
+	padding-right: var(--icon-padding);
+}
+
+.home-icon-link {
+	color: var(--white);
+	text-decoration: none;
+}
+
+.home-icon-link:hover {
+	color: var(--highlight);
+	transition-duration: 0.5s;
+}
+
+.home-icon-text {
+	font-size: var(--icon-font-size);
+	font-weight: 600;
+}
+
+.home-ip-text {
+	color: var(--white);
+	letter-spacing: 0.5px;
+	font-size: var(--home-ip-font-size);
+	display: inline-block;
+}
+
+.home-ip-text-highlight {
+	color: var(--highlight);
+	font-weight: 600;
+}
+
+.home-ip-text-underline {
+	background-image: linear-gradient(90deg, var(--gradient1), var(--gradient2));
+	background-position: bottom;
+	background-size: 100% 30%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.home-ip-text-underline:hover {
+	background-image: linear-gradient(-90deg, var(--gradient1), var(--gradient2));
+}
+
+#games {
+	color: var(--light-dark);
+	background-color: var(--light-gray);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+
+#vote {
+	background-image: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)), url("../assets/background-image2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: var(--white);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+
+.vote-card-text-color {
+	color: var(--light-dark);
+}
+
+.vote-text-padding {
+	padding-bottom: 5vh;
+}
+
+.vote-btn-color {
+	background-color: var(--highlight) !important;
+	border-color: var(--highlight) !important;
+}
+
+#staff {
+	color: var(--light-dark);
+	background-color: var(--light-gray);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+
+.card-img-round {
+	border-radius: 50%;
+	border-top-left-radius: 50% !important;
+	border-top-right-radius: 50% !important;
+	margin-bottom: 0.5vw;
+}
+
+#status {
+	color: var(--white);
+	background-color: var(--dark);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+
+.card-background-color-On {
+	background-color: var(--server-on) !important;
+}
+
+.card-background-color-Off {
+	background-color: var(--server-off) !important;
+}
+
+.server-icon-status svg {
+	width: 2vw;
+}
